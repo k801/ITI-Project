@@ -16,6 +16,7 @@ $(document).ready(function(){
    $("#suger").click(getRecipe('leek',4));
 
 $(".spinner").remove();
+$('#loading').hide().empty();
 
   
    $(".spinner").fadeOut(1000,function(){
