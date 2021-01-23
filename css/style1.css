@@ -1,0 +1,28 @@
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+
+}
+  
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+
+  .sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  .sidebar li{
+    margin-left: 0;
+    padding-left: 0;
+    min-width: 13em;
+    display:inline-block;
+    width: 100%;
+ } 

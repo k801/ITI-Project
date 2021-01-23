@@ -1,0 +1,328 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/index_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="  https://cdnjs.cloudflare.com/ajax/libs/css-spinning-spinners/1.1.1/load1.css" rel="stylesheet">
+  <title>dinner Club</title>
+</head>
+
+<body>
+  <div id="loading">
+    <div class="sk-folding-cube spinner">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+  </div>
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-start justify-content-center position-relative">
+      <h1 class="header-title">Vist Us Now</h1>
+      <div class="header-overly"></div>
+      <video autoplay muted loop id="myVideo">
+        <source src="./images/video/truefoodkitchen-main-video7.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <h1 class="w-100 text-center neverMiss">Never Miss a Recipe!</h1>
+      <div class="searchInput position-absolute w-75 m-auto p-5 shadow-lg rounded bg-light">
+        <div class="row no-gutters">
+          <div class="col-md-10">
+            <input id="searchInput" placeholder="Search Over 10,000 recipe ..." class=" rounded-0 form-control"
+              type="text" name="" id="">
+          </div>
+          <div class="col-md-2">
+            <button id="searchBtn" class="btn  btn-block text-white btn-mine">search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="recipesSearch" class="text-center py-5">
+      <div class="container-fluid py-5">
+
+        <div class="row my-5  mojor-title">
+        </div>
+        <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+              aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+              aria-selected="false">Protein</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+              aria-selected="false">Fruits</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="suger-tab" data-bs-toggle="tab" href="#suger" role="tab" aria-controls="contact"
+              aria-selected="false">Dairy</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            <div class="container text-left">
+
+              <div class="row ">
+                <div class="col-md-10 text-center ">
+                  <div id="recipesRow1" class="row ">
+
+                  </div>
+                </div>
+                <div class="col-md-2  part-color">
+                  <section class="app sidebar">
+
+
+                    <nav role="navigation ">
+                      <ul>
+                        <li class="text-center ">
+                          <h5 class="text-success  ">Most Popular</h5>
+                        </li>
+                        <div class=" text-center">
+                          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link" id="side1bar1" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar2" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('tomato')">tomato</a>
+                            <a class="nav-link" id="side1bar3" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar4" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('chickpea')">chickpea</a>
+                            <a class="nav-link" id="side1bar5" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('apricot')">apricot</a>
+                            <a class="nav-link" id="side1bar6" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('boysenberry')">boysenberry</a>
+                            <a class="nav-link" id="side1bar7" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('nectarine')">nectarine</a>
+                            <a class="nav-link" id="side1bar8" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('raspberry')">raspberry</a>
+                            <a class="nav-link" id="side1bar9" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('strawberry')">strawberry</a>
+                            <a class="nav-link" id="side1bar10" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('watermelon')">watermelon</a>
+                            <a class="nav-link" id="side1bar11" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('salad')">salad</a>
+                            <a class="nav-link" id="side1bar12" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('popcorn')">popcorn</a>
+                          </div>
+                      </ul>
+                    </nav>
+
+
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div id="#profile-tab" class="row">
+              <div class="container text-left">
+                <div class="row no-gutters">
+                  <div class="col-md-10">
+                    <div id="recipesRow2" class="row">
+                    </div>
+                  </div>
+
+                  <div class="col-md-2  part-color">
+
+                    <section class="app sidebar">
+
+
+                      <nav role="navigation ">
+                        <ul>
+                          <li class="text-center ">
+                            <h5 class="text-success font-weight-bold ">Most Popular</h5>
+                          </li>
+                          <div class=" text-center">
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                              aria-orientation="vertical">
+                              <a class="nav-link" id="side1bar1" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                              <a class="nav-link" id="side1bar2" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('tomato')">tomato</a>
+                              <a class="nav-link" id="side1bar3" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                              <a class="nav-link" id="side1bar4" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('chickpea')">chickpea</a>
+                              <a class="nav-link" id="side1bar5" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('apricot')">apricot</a>
+                              <a class="nav-link" id="side1bar6" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('boysenberry')">boysenberry</a>
+                              <a class="nav-link" id="side1bar7" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('nectarine')">nectarine</a>
+                              <a class="nav-link" id="side1bar8" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('raspberry')">raspberry</a>
+                              <a class="nav-link" id="side1bar9" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('strawberry')">strawberry</a>
+                              <a class="nav-link" id="side1bar10" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('watermelon')">watermelon</a>
+                              <a class="nav-link" id="side1bar11" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('salad')">salad</a>
+                              <a class="nav-link" id="side1bar12" data-bs-toggle="tab" href="#home" role="tab"
+                                aria-controls="profile" onclick="getRecipe('popcorn')">popcorn</a>
+                            </div>
+                        </ul>
+                      </nav>
+
+
+                    </section>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            <div class="container text-left">
+
+              <div class="row no-gutters">
+
+
+                <div class="col-md-10">
+                  <div id="recipesRow3" class="row ">
+
+                  </div>
+
+                </div>
+                <div class="col-md-2  part-color">
+
+                  <section class="app sidebar">
+
+
+                    <nav role="navigation ">
+                      <ul>
+                        <li class="text-center ">
+                          <h5 class="text-success font-weight-bold ">Most Popular</h5>
+                        </li>
+                        <div class=" text-center">
+                          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link" id="side1bar1" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar2" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('tomato')">tomato</a>
+                            <a class="nav-link" id="side1bar3" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar4" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('chickpea')">chickpea</a>
+                            <a class="nav-link" id="side1bar5" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('apricot')">apricot</a>
+                            <a class="nav-link" id="side1bar6" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('boysenberry')">boysenberry</a>
+                            <a class="nav-link" id="side1bar7" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('nectarine')">nectarine</a>
+                            <a class="nav-link" id="side1bar8" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('raspberry')">raspberry</a>
+                            <a class="nav-link" id="side1bar9" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('strawberry')">strawberry</a>
+                            <a class="nav-link" id="side1bar10" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('watermelon')">watermelon</a>
+                            <a class="nav-link" id="side1bar11" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('salad')">salad</a>
+                            <a class="nav-link" id="side1bar12" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('popcorn')">popcorn</a>
+                          </div>
+                      </ul>
+                    </nav>
+
+
+                  </section>
+                </div>
+
+
+              </div>
+            </div>
+
+            <!-- close the three windows -->
+          </div>
+
+          <div class="tab-pane fade" id="suger" role="tabpanel" aria-labelledby="contact-tab">
+
+            <div class="container text-left">
+
+              <div class="row no-gutters">
+
+
+                <div class="col-md-10">
+                  <div id="recipesRow4" class="row ">
+
+                  </div>
+                </div>
+                <div class="col-md-2  part-color">
+
+                  <section class="app sidebar">
+
+
+                    <nav role="navigation ">
+                      <ul>
+                        <li class="text-center ">
+                          <h5 class="text-success font-weight-bold ">Most Popular</h5>
+                        </li>
+                        <div class=" text-center">
+                          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link" id="side1bar1" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar2" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('tomato')">tomato</a>
+                            <a class="nav-link" id="side1bar3" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('coriander')">coriander</a>
+                            <a class="nav-link" id="side1bar4" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('chickpea')">chickpea</a>
+                            <a class="nav-link" id="side1bar5" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('apricot')">apricot</a>
+                            <a class="nav-link" id="side1bar6" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('boysenberry')">boysenberry</a>
+                            <a class="nav-link" id="side1bar7" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('nectarine')">nectarine</a>
+                            <a class="nav-link" id="side1bar8" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('raspberry')">raspberry</a>
+                            <a class="nav-link" id="side1bar9" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('strawberry')">strawberry</a>
+                            <a class="nav-link" id="side1bar10" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('watermelon')">watermelon</a>
+                            <a class="nav-link" id="side1bar11" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('salad')">salad</a>
+                            <a class="nav-link" id="side1bar12" data-bs-toggle="tab" href="#home" role="tab"
+                              aria-controls="profile" onclick="getRecipe('popcorn')">popcorn</a>
+                          </div>
+                      </ul>
+                    </nav>
+                  </section>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- close the first windows -->
+          </div>
+
+        </div>
+      </div>
+  </div>
+  </div>
+  <div id="lightboxcontainer">
+    <div id="lightboxitem" class=" text-light">
+      <i id="close" class="far fa-times-circle fa-10x"></i>
+    </div>
+  </div>
+  </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="js/first.js"></script>
+</body>
+
+</html>
