@@ -15,8 +15,8 @@ $(document).ready(function(){
    $("#myTabContent").click(getRecipe('pumpkin',3));
    $("#suger").click(getRecipe('leek',4));
 
-$(".spinner").remove();
-$('#loading').hide().empty();
+// $(".spinner").remove();
+// $('#loading').hide().empty();
 
   
    $(".spinner").fadeOut(1000,function(){
